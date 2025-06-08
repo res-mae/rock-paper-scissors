@@ -1,7 +1,14 @@
 let humanScore = 0;
 let computerScore = 0;
+let startGame = null;
 
-playGame();
+startGame = prompt("Open the browser console, refresh the page, and press Enter to start.");
+
+if (startGame != null) {
+    playGame();
+}
+
+console.log("Refresh the page to play again.");
 
 function getComputerChoice() {
     const randomChoice = ["rock", "paper", "scissors"]
@@ -72,6 +79,8 @@ function playGame() {
         console.log("\nYou win!");
     } else if (computerScore > humanScore) {
         console.log("\nYou lose!");
+    } else {
+        console.log("\nIt's a tie");
     }
 
     return console.log("Final score: " + humanScore + "-" + computerScore);
